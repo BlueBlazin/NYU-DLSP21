@@ -91,7 +91,7 @@
 3. (d)
    $$
    \left(\frac{\partial{l}}{\partial{\mathbf{\hat{y}}}}\right)_{ij} = 
-   \left(\frac{y_i}{\hat{y_i}} - \frac{(1 - y_i)}{(1 - \hat{y_i})}\right)\delta_{ij}.
+   \frac{-1}{K} \left(\frac{y_i}{\hat{y_i}} - \frac{(1 - y_i)}{(1 - \hat{y_i})}\right)\delta_{ij}.
    $$
    where $\delta_{ij}$ is the Kronecker delta function.
 
