@@ -49,13 +49,19 @@ $$
 
 ## 1.2 Recurrent Neural Networks
 
+**(a)**      ![hw2-rnn](/Users/sanjeet/NYU-DLSP21/homework2/hw2-rnn.png)
 
 
 
+**(b)** $z_t \in \R^m.$
 
+**(c)**
 
+​	Dimension of $\frac{\partial l}{\partial W_x} \in \R^{n \times m}.$
 
+​	$\frac{\partial l}{\partial W_x} = $
 
+​	
 
 
 
