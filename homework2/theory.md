@@ -49,19 +49,55 @@ $$
 
 ## 1.2 Recurrent Neural Networks
 
-**(a)**      ![hw2-rnn](/Users/sanjeet/NYU-DLSP21/homework2/hw2-rnn.png)
-
-
+**(a)**      ![hw2-rnn.png](/Users/sanjeet/NYU-DLSP21/homework2/hw2-rnn.png.png)
 
 **(b)** $z_t \in \R^m.$
 
 **(c)**
 
 ​	Dimension of $\frac{\partial l}{\partial W_x} \in \R^{n \times m}.$
+$$
+\frac{\partial l}{\partial W_x} = \sum\limits_t \frac{\partial l}{\partial z_t} \frac{\partial z_t}{\partial W_x},
+\\
+= \sum\limits_t \frac{\partial l}{\partial z_t} \bigg( c_t \odot \frac{\partial z_{t - 1}}{\partial W_x} + (1 - c_t) \odot \frac{\partial W_x x_{t-1}}{\partial W_x} \bigg).
+$$
+​	Both the backward and forward pass have a very similar structure with the main difference being the forward pass is a branching out operation as the same shared weights $W_x$ produce multiple outputs whereas the backward pass is a sum as the gradients all accumulate in $\frac{\partial l}{\partial W_x}$.
 
-​	$\frac{\partial l}{\partial W_x} = $
+**(d)** This network can be subject to the exploding gradient problem gradient w.r.t. the output at timestep $t$ has a multiplicative dependency on all gradients w.r.t. outputs in the future timesteps. This can cause the gradient to blow up.
 
-​	
+The network is less susceptible to the vanishing gradient problem due to the $c_t \odot z_{t - 1}$ term that provides the gradient to pass backwards without a multiplicative interaction.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
